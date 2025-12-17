@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: customer-orders-dao-migrations
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.jdbc.core: DEBUG
